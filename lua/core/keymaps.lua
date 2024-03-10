@@ -6,17 +6,20 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 keymap("n", "<leader>w", ":w<CR>", opts)
 keymap("n", "<leader>q", ":q<CR>", opts)
+keymap("n", "<leader>q", ":q<CR>", opts)
+keymap('n', '<leader>v', ':vnew | Telescope find_files<CR>')
+keymap('n', '<leader>v', ':vnew | Telescope find_files<CR>')
 
 -- Custom Remaps
 keymap("i", "jj", "<Esc>", opts)
 keymap("n", "<Esc>", ":noh<CR>", opts)
 
 -- Better window navigation
-keymap("n", "<m-h>", "<C-w>h", opts)
-keymap("n", "<m-j>", "<C-w>j", opts)
-keymap("n", "<m-k>", "<C-w>k", opts)
-keymap("n", "<m-l>", "<C-w>l", opts)
-keymap("n", "<m-tab>", "<c-6>", opts)
+keymap("n", "<C-h>", "<C-w>h", opts)
+keymap("n", "<C-j>", "<C-w>j", opts)
+keymap("n", "<C-k>", "<C-w>k", opts)
+keymap("n", "<C-l>", "<C-w>l", opts)
+keymap("n", "<C-tab>", "<c-6>", opts)
 
 keymap("n", "n", "nzz", opts)
 keymap("n", "N", "Nzz", opts)
@@ -39,3 +42,9 @@ keymap({ "n", "o", "x" }, "<s-h>", "^", opts)
 keymap({ "n", "o", "x" }, "<s-l>", "g_", opts)
 
 vim.api.nvim_set_keymap('t', '<C-;>', '<C-\\><C-n>', opts)
+
+
+-- Tree
+keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+
+keymap("n", "<leader>q", ":q<CR>", opts)

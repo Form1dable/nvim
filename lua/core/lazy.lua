@@ -13,12 +13,22 @@ vim.opt.rtp:prepend(lazypath)
 
 
 require("lazy").setup({
-  {"morhetz/gruvbox", lazy = false, priority = 1000},
-  {"windwp/nvim-autopairs"},
-  { 
-   'nvim-telescope/telescope.nvim', 
-    tag = '0.1.5', 
-    dependencies = { 'nvim-lua/plenary.nvim' }
-  },
+  -- Customization
+  { "morhetz/gruvbox", lazy = false, priority = 1000},
+  { "nyoom-engineering/oxocarbon.nvim" },
+  {"ryanoasis/vim-devicons"},
+  { "nvim-tree/nvim-web-devicons", event = "VeryLazy", }, 
+
+  -- General
+  { "windwp/nvim-autopairs"}, 
+  { "nvim-treesitter/nvim-treesitter", dependencies = { { "nvim-treesitter/nvim-treesitter-textobjects", }, }, },
+  { "nvim-lualine/lualine.nvim", dependencies = { 'nvim-tree/nvim-web-devicons' } },
+
+  -- Navigation
+  { 'nvim-telescope/telescope.nvim', tag = '0.1.5', dependencies = { 'nvim-lua/plenary.nvim' } },
+  { "nvim-tree/nvim-tree.lua" },
+
+  -- Utils
+  { "folke/which-key.nvim", event = "VeryLazy", },
 })
 
