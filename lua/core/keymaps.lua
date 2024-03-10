@@ -6,8 +6,6 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 keymap("n", "<leader>w", ":w<CR>", opts)
 keymap("n", "<leader>q", ":q<CR>", opts)
-keymap("n", "<leader>q", ":q<CR>", opts)
-keymap('n', '<leader>v', ':vnew | Telescope find_files<CR>')
 keymap('n', '<leader>v', ':vnew | Telescope find_files<CR>')
 
 -- Custom Remaps
@@ -34,17 +32,11 @@ keymap("v", ">", ">gv", opts)
 
 keymap("x", "p", [["_dP]])
 
-vim.keymap.set("n", "<RightMouse>", "<cmd>:popup mousemenu<CR>")
-vim.keymap.set("n", "<Tab>", "<cmd>:popup mousemenu<CR>")
-
 -- more good
 keymap({ "n", "o", "x" }, "<s-h>", "^", opts)
 keymap({ "n", "o", "x" }, "<s-l>", "g_", opts)
 
 vim.api.nvim_set_keymap('t', '<C-;>', '<C-\\><C-n>', opts)
 
-
 -- Tree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
-
-keymap("n", "<leader>q", ":q<CR>", opts)

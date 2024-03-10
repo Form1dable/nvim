@@ -1,4 +1,8 @@
-local wk = require("which-key")
+local ok, wk = pcall(require, "which-key")
+if not ok then
+  return
+end
+
 wk.register(mappings, opts)
 
 wk.setup {
@@ -79,7 +83,7 @@ wk.setup {
   triggers_blacklist = {
     -- list of mode / prefixes that should never be hooked by WhichKey
     -- this is mostly relevant for keymaps that start with a native binding
-    i = { "j", "k" },
+    i = { "j", "j" },
     v = { "j", "k" },
   },
   -- disable the WhichKey popup for certain buf types and file types.

@@ -1,4 +1,9 @@
-require("nvim-treesitter.configs").setup {
+local ok, treesitter = pcall(require, "nvim-treesitter.configs")
+if not ok then
+  return
+end
+
+treesitter.setup {
     ensure_installed = { "lua", "markdown", "markdown_inline", "bash", "python" }, -- put the language you want in this array
     ignore_install = { "" },
     sync_install = false,

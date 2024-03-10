@@ -1,6 +1,11 @@
+local ok, nvim_tree = pcall(require, "nvim-tree")
+if not ok then
+  return
+end
+
 local icons = require "core.icons"
 
-require("nvim-tree").setup {
+nvim_tree.setup {
   on_attach = my_on_attach,
   hijack_netrw = false,
   sync_root_with_cwd = true,

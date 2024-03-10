@@ -1,6 +1,11 @@
 local wk = require("which-key")
 
-require('telescope').setup{
+local ok, telescope = pcall(require, "telescope")
+if not ok then
+  return
+end
+
+telescope.setup{
   defaults = {
     mappings = {
       i = {
@@ -78,10 +83,9 @@ local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>f', builtin.find_files, {})
 vim.keymap.set('n', '<leader>g', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>b', builtin.buffers, {})
-vim.keymap.set('n', '<leader>h', builtin.help_tags, {})
 
 wk.register({
-    f = { "<cmd>Telescope find_files<cr>", "Find File" }, -- create a binding with label
-    g = { "<cmd>Telescope live_grep<cr>", "Live Grep" }, -- create a binding with label
-    b = { "<cmd>Telescope buffers<cr>", "Buffers" }, -- create a binding with label
+    f = { "<cmd>Telescope find_files<cr>", "Find File" }, 
+    g = { "<cmd>Telescope live_grep<cr>", "Live Grep" }, 
+    b = { "<cmd>Telescope buffers<cr>", "Buffers" }, 
 },{ prefix = "<leader>" })
