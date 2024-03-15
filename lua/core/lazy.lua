@@ -14,22 +14,45 @@ vim.opt.rtp:prepend(lazypath)
 
 
 require("lazy").setup({
-  -- Customization
+  -- Themes
   { "morhetz/gruvbox", lazy = false, priority = 1000},
   { "nyoom-engineering/oxocarbon.nvim" },
-  {"ryanoasis/vim-devicons"},
-  { "nvim-tree/nvim-web-devicons", event = "VeryLazy", }, 
+  { "marko-cerovac/material.nvim" },
+  { "cpea2506/one_monokai.nvim" },
 
-  -- General
+  -- Customization
+  { "ryanoasis/vim-devicons" },
+  { "nvim-tree/nvim-web-devicons", event = "VeryLazy", }, 
+  { "stevearc/dressing.nvim", opts = {}, },
+
+  -- Utilities
   { "windwp/nvim-autopairs"}, 
   { "nvim-treesitter/nvim-treesitter", dependencies = { { "nvim-treesitter/nvim-treesitter-textobjects", }, }, },
   { "nvim-lualine/lualine.nvim", dependencies = { 'nvim-tree/nvim-web-devicons' } },
+  { "akinsho/bufferline.nvim" },
+  { "folke/which-key.nvim", event = "VeryLazy", },
+  { "lukas-reineke/indent-blankline.nvim" },
 
   -- Navigation
   { 'nvim-telescope/telescope.nvim', tag = '0.1.5', dependencies = { 'nvim-lua/plenary.nvim' } },
   { "nvim-tree/nvim-tree.lua" },
 
-  -- Utils
-  { "folke/which-key.nvim", event = "VeryLazy", },
+  -- Completion
+  { "hrsh7th/nvim-cmp",
+    dependencies = {
+      { "hrsh7th/cmp-nvim-lsp", event = "InsertEnter", },
+      { "hrsh7th/cmp-emoji", event = "InsertEnter", },
+      { "hrsh7th/cmp-buffer", event = "InsertEnter", },
+      { "hrsh7th/cmp-path", event = "InsertEnter", },
+      { "hrsh7th/cmp-cmdline", event = "InsertEnter", },
+      { "saadparwaiz1/cmp_luasnip", event = "InsertEnter", },
+      { "L3MON4D3/LuaSnip", event = "InsertEnter", dependencies = { "rafamadriz/friendly-snippets", }, },
+      { "hrsh7th/cmp-nvim-lua", },
+      { "roobert/tailwindcss-colorizer-cmp.nvim", },
+    },},
+
+  -- LSP
+  { "williamboman/mason.nvim", dependencies = {{"williamboman/mason-lspconfig.nvim"}} },
+
 })
 

@@ -6,7 +6,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 keymap("n", "<leader>w", ":w<CR>", opts)
 keymap("n", "<leader>q", ":q<CR>", opts)
-keymap('n', '<leader>v', ':vnew | Telescope find_files<CR>')
+keymap('n', '<leader>s', ':vnew | Telescope find_files<CR>')
 
 -- Custom Remaps
 keymap("i", "jj", "<Esc>", opts)

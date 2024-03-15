@@ -3,14 +3,18 @@ if not ok then
   return
 end
 
+local opts = { noremap = true, silent = true }
 local icons = require "core.icons"
+local HEIGHT_RATIO = 0.8 
+local WIDTH_RATIO = 0.5 
 
 nvim_tree.setup {
   on_attach = my_on_attach,
   hijack_netrw = false,
   sync_root_with_cwd = true,
   view = {
-    relativenumber = true,
+    side="right",
+    adaptive_size=true,
   },
   renderer = {
     add_trailing = false,
@@ -19,9 +23,9 @@ nvim_tree.setup {
     full_name = false,
     highlight_opened_files = "none",
     root_folder_label = ":t",
-    indent_width = 2,
+    indent_width = 4,
     indent_markers = {
-      enable = false,
+      enable = true,
       inline_arrows = true,
       icons = {
         corner = "└",
@@ -86,3 +90,4 @@ nvim_tree.setup {
     },
   },
 }
+

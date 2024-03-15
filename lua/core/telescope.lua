@@ -5,11 +5,16 @@ if not ok then
   return
 end
 
+local actions = require("telescope.actions")
+
 telescope.setup{
   defaults = {
     mappings = {
       i = {
-        ["<C-h>"] = "which_key"
+        ["<C-h>"] = "which_key",
+        ["<C-k>"] = actions.move_selection_previous,
+        ["<C-j>"] = actions.move_selection_next,
+        ["<Esc>"] = actions.close,
       }
     },
     file_ignore_patterns = {
