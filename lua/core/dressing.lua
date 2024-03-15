@@ -15,7 +15,7 @@ dressing.setup({
     trim_prompt = true,
 
     -- Can be 'left', 'right', or 'center'
-    title_pos = "left",
+    title_pos = "center",
 
     -- When true, <Esc> will close the modal
     insert_only = true,

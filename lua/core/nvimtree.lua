@@ -13,8 +13,9 @@ nvim_tree.setup {
   hijack_netrw = false,
   sync_root_with_cwd = true,
   view = {
-    side="right",
+    side="left",
     adaptive_size=true,
+    width=40,
   },
   renderer = {
     add_trailing = false,

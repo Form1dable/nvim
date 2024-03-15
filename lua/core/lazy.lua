@@ -15,10 +15,11 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   -- Themes
-  { "morhetz/gruvbox", lazy = false, priority = 1000},
-  { "nyoom-engineering/oxocarbon.nvim" },
+  { "morhetz/gruvbox"},
   { "marko-cerovac/material.nvim" },
   { "cpea2506/one_monokai.nvim" },
+  { "sainnhe/gruvbox-material" },
+  { "olimorris/onedarkpro.nvim", priority = 1000, },
 
   -- Customization
   { "ryanoasis/vim-devicons" },
@@ -32,10 +33,15 @@ require("lazy").setup({
   { "akinsho/bufferline.nvim" },
   { "folke/which-key.nvim", event = "VeryLazy", },
   { "lukas-reineke/indent-blankline.nvim" },
+  { 'b0o/incline.nvim', event = 'VeryLazy',
+  },
 
   -- Navigation
   { 'nvim-telescope/telescope.nvim', tag = '0.1.5', dependencies = { 'nvim-lua/plenary.nvim' } },
   { "nvim-tree/nvim-tree.lua" },
+
+  -- Git
+  { "lewis6991/gitsigns.nvim" },
 
   -- Completion
   { "hrsh7th/nvim-cmp",
@@ -51,8 +57,6 @@ require("lazy").setup({
       { "roobert/tailwindcss-colorizer-cmp.nvim", },
     },},
 
-  -- LSP
-  { "williamboman/mason.nvim", dependencies = {{"williamboman/mason-lspconfig.nvim"}} },
 
 })
 
