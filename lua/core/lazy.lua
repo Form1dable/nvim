@@ -20,6 +20,7 @@ require("lazy").setup({
   { "cpea2506/one_monokai.nvim" },
   { "sainnhe/gruvbox-material" },
   { "olimorris/onedarkpro.nvim", priority = 1000, },
+  { "sainnhe/everforest" },
 
   -- Customization
   { "ryanoasis/vim-devicons" },

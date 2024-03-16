@@ -4,17 +4,17 @@ if not status_ok then
 end
 
 local colors = {
-  bg       = '#202328',
-  fg       = '#bbc2cf',
+  bg       = '#1d2021',
+  fg       = '#fbf1c7',
   yellow   = '#ECBE7B',
   cyan     = '#008080',
   darkblue = '#081633',
-  green    = '#98be65',
+  green    = '#b8bb26',
   orange   = '#FF8800',
-  violet   = '#a9a1e1',
+  violet   = '#b16286',
   magenta  = '#c678dd',
   blue     = '#51afef',
-  red      = '#ec5f67',
+  red      = '#cc241d',
 }
 
 local conditions = {
@@ -156,7 +156,7 @@ ins_left {
 ins_left {
   -- Lsp server name .
   function()
-    local msg = 'No Active Lsp'
+    local msg = 'Inactive'
     local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
     local clients = vim.lsp.get_active_clients()
     if next(clients) == nil then
@@ -170,8 +170,8 @@ ins_left {
     end
     return msg
   end,
-  icon = ' LSP:',
-  color = { fg = '#ffffff', gui = 'bold' },
+  icon = ' ',
+  color = { fg = '#f4f4f4', gui = 'bold' },
 }
 
 -- Add components to right sections
@@ -179,7 +179,7 @@ ins_right {
   'o:encoding', -- option component same as &encoding in viml
   fmt = string.upper, -- I'm not sure why it's upper case either ;)
   cond = conditions.hide_in_width,
-  color = { fg = colors.green, gui = 'bold' },
+  color = { fg = colors.violet, gui = 'bold' },
 }
 
 ins_right {
@@ -192,7 +192,7 @@ ins_right {
 ins_right {
   'branch',
   icon = '',
-  color = { fg = colors.violet, gui = 'bold' },
+  color = { fg = colors.red, gui = 'bold' },
 }
 
 ins_right {
