@@ -1,20 +1,28 @@
-require("core.options")
-require("core.keymaps")
 require("core.lazy")
 require("core.whichkey")
-require("core.colorscheme")
-require("core.autopairs")
-require("core.telescope")
-require("core.nvimtree")
-require("core.devicons")
-require("core.lualine")
-require("core.bufferline")
-require("core.cmp")
-require("core.dressing")
-require("core.indentline")
-require("core.incline")
-require("core.gitsigns")
+
+-- Config
+require("core.config.options")
+require("core.config.keymaps")
+require("core.config.colorscheme")
+
+-- Syntax and completion
+require("core.completion.cmp")
+require("core.completion.treesitter")
+
+require("core.git.gitsigns")
 require("core.lsp.mason")
 require("core.lsp.lspconfig")
 require("core.lsp.none-ls")
--- require("core.toggleterm")
+
+-- Plugins
+require("core.plugins.autopairs")
+require("core.plugins.telescope")
+require("core.plugins.nvimtree")
+require("core.plugins.devicons")
+require("core.plugins.lualine")
+require("core.plugins.bufferline")
+require("core.plugins.dressing")
+require("core.plugins.indentline")
+require("core.plugins.incline")
+-- require("core.plugins.toggleterm")
