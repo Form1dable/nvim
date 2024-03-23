@@ -3,7 +3,7 @@ if not ok then
 	return
 end
 
-local icons = require("core.icons")
+local icons = require("core.plugins.icons")
 local HEIGHT_RATIO = 0.8
 local WIDTH_RATIO = 0.5
 
