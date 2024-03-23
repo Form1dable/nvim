@@ -20,6 +20,7 @@ telescope.setup{
     file_ignore_patterns = {
       "node_modules/.*",
       "single_meshes_glb/.*",
+      "dist/",
       "%.lock$",
       "%.swp$",
       "%.class$",

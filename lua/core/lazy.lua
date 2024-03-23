@@ -34,8 +34,9 @@ require("lazy").setup({
   { "akinsho/bufferline.nvim" },
   { "folke/which-key.nvim", event = "VeryLazy", },
   { "lukas-reineke/indent-blankline.nvim" },
-  { 'b0o/incline.nvim', event = 'VeryLazy',
-  },
+  { 'b0o/incline.nvim', event = 'VeryLazy', },
+  { 'akinsho/toggleterm.nvim', version = "*", config = true },
+
 
   -- Navigation
   { 'nvim-telescope/telescope.nvim', tag = '0.1.5', dependencies = { 'nvim-lua/plenary.nvim' } },
@@ -58,6 +59,9 @@ require("lazy").setup({
       { "roobert/tailwindcss-colorizer-cmp.nvim", },
     },},
 
-
+    --
+    { "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim", "neovim/nvim-lspconfig", },
+    { "nvimtools/none-ls.nvim" },
+    {'jay-babu/mason-null-ls.nvim'},
 })
 
