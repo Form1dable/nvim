@@ -4,6 +4,7 @@ require("core.whichkey")
 -- Config
 require("core.config.options")
 require("core.config.keymaps")
+require("core.config.autocmd")
 require("core.config.colorscheme")
 
 -- Syntax and completion
