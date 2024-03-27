@@ -89,4 +89,5 @@ nvim_tree.setup({
 	},
 })
 
-vim.keymap.set("n", "<ESC>", ":NvimTreeClose<CR>")
+-- Tree
+vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true })

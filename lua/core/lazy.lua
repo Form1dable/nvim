@@ -17,9 +17,6 @@ require("lazy").setup({
 	{ "marko-cerovac/material.nvim" },
 	{ "sainnhe/gruvbox-material" },
 	{ "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = ... },
-	{ "wdhg/dragon-energy" },
-	{ "rebelot/kanagawa.nvim" },
-	{ "sainnhe/everforest" },
 
 	-- Customization
 	{ "ryanoasis/vim-devicons" },
@@ -60,7 +57,7 @@ require("lazy").setup({
 		},
 	},
 
-	--
+	-- LSP and Formatting
 	{ "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim", "neovim/nvim-lspconfig" },
 	{ "nvimtools/none-ls.nvim" },
 	{ "jay-babu/mason-null-ls.nvim" },
