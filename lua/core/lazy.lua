@@ -34,7 +34,8 @@ require("lazy").setup({
 	{ "folke/which-key.nvim", event = "VeryLazy" },
 	{ "lukas-reineke/indent-blankline.nvim" },
 	{ "b0o/incline.nvim", event = "VeryLazy" },
-	{ "akinsho/toggleterm.nvim", version = "*", config = true },
+	{ "ggandor/lightspeed.nvim" },
+	{ "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" }, opts = {} },
 
 	-- Navigation
 	{ "nvim-telescope/telescope.nvim", tag = "0.1.5", dependencies = { "nvim-lua/plenary.nvim" } },

@@ -40,3 +40,6 @@ vim.api.nvim_set_keymap("t", "<C-;>", "<C-\\><C-n>", opts)
 
 -- Tree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+
+-- Todo
+keymap("n", "<leader>td", ":TodoTelescope<CR>", opts)
