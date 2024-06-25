@@ -34,6 +34,9 @@ require("lazy").setup({
 	{ "ggandor/lightspeed.nvim" },
 	{ "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" }, opts = {} },
 
+	-- Code
+	{ "folke/trouble.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
+
 	-- Navigation
 	{ "nvim-telescope/telescope.nvim", tag = "0.1.5", dependencies = { "nvim-lua/plenary.nvim" } },
 	{ "nvim-tree/nvim-tree.lua" },
