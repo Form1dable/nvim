@@ -21,13 +21,11 @@ require("lazy").setup({
 	-- Customization
 	{ "ryanoasis/vim-devicons" },
 	{ "nvim-tree/nvim-web-devicons", event = "VeryLazy" },
-	{ "stevearc/dressing.nvim", opts = {} },
 
 	-- Utilities
 	{ "windwp/nvim-autopairs" },
 	{ "nvim-treesitter/nvim-treesitter", dependencies = { { "nvim-treesitter/nvim-treesitter-textobjects" } } },
 	{ "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
-	{ "akinsho/bufferline.nvim" },
 	{ "folke/which-key.nvim", event = "VeryLazy" },
 	{ "lukas-reineke/indent-blankline.nvim" },
 	{ "b0o/incline.nvim", event = "VeryLazy" },
