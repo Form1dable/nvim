@@ -31,6 +31,7 @@ require("lazy").setup({
 	{ "b0o/incline.nvim", event = "VeryLazy" },
 	{ "ggandor/lightspeed.nvim" },
 	{ "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" }, opts = {} },
+	{ "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
 
 	-- Code
 	{ "folke/trouble.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
@@ -55,6 +56,19 @@ require("lazy").setup({
 			{ "L3MON4D3/LuaSnip", event = "InsertEnter", dependencies = { "rafamadriz/friendly-snippets" } },
 			{ "hrsh7th/cmp-nvim-lua" },
 			{ "roobert/tailwindcss-colorizer-cmp.nvim" },
+		},
+	},
+	{
+		"kdheepak/lazygit.nvim",
+		cmd = {
+			"LazyGit",
+			"LazyGitConfig",
+			"LazyGitCurrentFile",
+			"LazyGitFilter",
+			"LazyGitFilterCurrentFile",
+		},
+		dependencies = {
+			"nvim-lua/plenary.nvim",
 		},
 	},
 

@@ -1,11 +1,9 @@
+local icons = require("core.plugins.icons")
+
 local ok, nvim_tree = pcall(require, "nvim-tree")
 if not ok then
 	return
 end
-
-local icons = require("core.plugins.icons")
-local HEIGHT_RATIO = 0.8
-local WIDTH_RATIO = 0.5
 
 nvim_tree.setup({
 	hijack_netrw = false,
@@ -88,6 +86,3 @@ nvim_tree.setup({
 		},
 	},
 })
-
--- Tree
-vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true })

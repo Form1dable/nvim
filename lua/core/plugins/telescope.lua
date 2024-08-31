@@ -11,9 +11,10 @@ telescope.setup({
 	defaults = {
 		mappings = {
 			i = {
-				["<C-h>"] = "which_key",
 				["<C-k>"] = actions.move_selection_previous,
 				["<C-j>"] = actions.move_selection_next,
+				["<C-s>"] = actions.select_vertical,
+				["<C-h>"] = actions.select_horizontal,
 				["<Esc>"] = actions.close,
 			},
 		},
@@ -116,7 +117,6 @@ telescope.setup({
 		border = {},
 		borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
 		color_devicons = true,
-		use_less = true,
 		set_env = { ["COLORTERM"] = "truecolor" }, -- default = nil,
 		file_previewer = require("telescope.previewers").vim_buffer_cat.new,
 		grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
@@ -127,14 +127,3 @@ telescope.setup({
 	pickers = {},
 	extensions = {},
 })
-
-local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>f", builtin.find_files, {})
-vim.keymap.set("n", "<leader>g", builtin.live_grep, {})
-vim.keymap.set("n", "<leader>b", builtin.buffers, {})
-
-wk.register({
-	f = { "<cmd>Telescope find_files<cr>", "Find File" },
-	g = { "<cmd>Telescope live_grep<cr>", "Live Grep" },
-	b = { "<cmd>Telescope buffers<cr>", "Buffers" },
-}, { prefix = "<leader>" })
