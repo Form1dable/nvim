@@ -45,9 +45,10 @@ keymap("n", "n", "nzz", opts)
 keymap("n", "N", "Nzz", opts)
 keymap("n", "*", "*zz", opts)
 keymap("n", "#", "#zz", opts)
-keymap("n", "<leader>lg", ":LazyGit<CR>", opts)
 
 -- Git
+keymap("n", "<leader>lg", ":LazyGit<CR>", opts)
+
 keymap("n", "<leader>gl", function()
 	if vim.wo.diff then
 		vim.cmd.normal({ "]c", bang = true })
