@@ -21,8 +21,8 @@ keymap("n", "<Leader>ss", ":vsplit<CR>", opts)
 keymap("n", "<Leader>sh", ":split<CR>", opts)
 
 -- Buffers
-keymap("n", "<Leader>bh", ":bnext<CR>", opts)
-keymap("n", "<Leader>bl", ":bprevious<CR>", opts)
+keymap("n", "<Leader>bl", ":bnext<CR>", opts)
+keymap("n", "<Leader>bh", ":bprevious<CR>", opts)
 keymap("n", "<Leader>bd", ":bdelete<CR>", opts)
 keymap("n", "<Leader>bx", ":bufdo bd<CR>", opts)
 
@@ -65,9 +65,9 @@ keymap("n", "<leader>gh", function()
 	end
 end, opts)
 
-keymap("n", "<leader>gs", require("gitsigns").preview_hunk, opts)
-keymap("n", "<leader>gb", require("gitsigns").toggle_current_line_blame, opts)
-keymap("n", "<leader>gd", require("gitsigns").diffthis, opts)
-keymap("n", "<leader>gB", function()
+keymap("n", "<leader>hs", require("gitsigns").preview_hunk, opts)
+keymap("n", "<leader>hb", require("gitsigns").toggle_current_line_blame, opts)
+keymap("n", "<leader>hd", require("gitsigns").diffthis, opts)
+keymap("n", "<leader>hB", function()
 	require("gitsigns").blame_line({ full = true })
 end, opts)

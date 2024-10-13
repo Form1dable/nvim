@@ -47,6 +47,7 @@ lspconfig.tsserver.setup({
 
 -- Vue
 lspconfig.volar.setup({})
+lspconfig.clangd.setup({})
 
 -- Lua
 lspconfig.lua_ls.setup({
