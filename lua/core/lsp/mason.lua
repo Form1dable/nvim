@@ -18,14 +18,13 @@ mason.setup({
 
 mason_lspconfig.setup({
 	ensure_installed = {
-		"tsserver",
+		"ts_ls",
 		"html",
 		"cssls",
 		"lua_ls",
 		"graphql",
 		"emmet_ls",
 		"pyright",
-		"clandg",
 	},
 	automatic_installation = true, -- not the same as ensure_installed
 })

@@ -33,8 +33,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 lspconfig.pyright.setup({})
 
--- TSserver
-lspconfig.tsserver.setup({
+lspconfig.ts_ls.setup({
 	filetypes = {
 		"javascript",
 		"typescript",
@@ -47,7 +46,6 @@ lspconfig.tsserver.setup({
 
 -- Vue
 lspconfig.volar.setup({})
-lspconfig.clangd.setup({})
 
 -- Lua
 lspconfig.lua_ls.setup({
